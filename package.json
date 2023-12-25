@@ -1,15 +1,22 @@
 {
   "name": "lisa-eaton-photo_website",
   "version": "0.1.0",
+  "homepage": "http://erickeaton7.github.io/lisa-eaton-photo",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "aws-sdk": "^2.1525.0",
     "bootstrap": "^5.3.2",
+    "dotenv": "^16.3.1",
+    "imagesloaded": "^5.0.0",
+    "masonry-layout": "^4.2.2",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18"
@@ -20,6 +27,7 @@
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
+    "gh-pages": "^6.1.1",
     "postcss": "^8",
     "tailwindcss": "^3.3.0"
   }
